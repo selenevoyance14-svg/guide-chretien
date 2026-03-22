@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { BookOpen, Heart, Gift, Sparkles, Church, Flame, Cross } from "lucide-react";
+import { BookOpen, Heart, Gift, Sparkles, Church, Flame, Cross, ShoppingBag } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Guide Chretien — Foi, Livres, Cadeaux & Spiritualite",
@@ -48,12 +48,20 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               <a href="/categorie/priere" className="flex items-center gap-1.5 text-gray-600 hover:text-amber-600 transition">
                 <Flame size={15} /> Priere
               </a>
+              <a href="/priere-du-jour" className="flex items-center gap-1.5 text-amber-600 font-semibold hover:text-amber-700 transition">
+                <Cross size={15} /> Du jour
+              </a>
+              <a href="/boutique" className="flex items-center gap-1.5 text-gray-600 hover:text-amber-600 transition">
+                <ShoppingBag size={15} /> Boutique
+              </a>
             </nav>
             <nav className="md:hidden flex items-center gap-3">
               <a href="/categorie/bibles" className="text-gray-600 hover:text-amber-600"><BookOpen size={20} /></a>
               <a href="/categorie/cadeaux" className="text-gray-600 hover:text-amber-600"><Gift size={20} /></a>
               <a href="/categorie/anges" className="text-gray-600 hover:text-amber-600"><Sparkles size={20} /></a>
               <a href="/categorie/priere" className="text-gray-600 hover:text-amber-600"><Flame size={20} /></a>
+              <a href="/priere-du-jour" className="text-amber-600 hover:text-amber-700"><Cross size={20} /></a>
+              <a href="/boutique" className="text-gray-600 hover:text-amber-600"><ShoppingBag size={20} /></a>
             </nav>
           </div>
         </header>

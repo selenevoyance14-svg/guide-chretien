@@ -1,5 +1,6 @@
 import { getAllArticles, CATEGORIES } from "@/lib/articles";
 import { Cross, Search, BookOpen, Heart } from "lucide-react";
+import DailyContent from "@/components/DailyContent";
 
 export default function HomePage() {
   const articles = getAllArticles();
@@ -26,6 +27,15 @@ export default function HomePage() {
             ))}
           </div>
         </div>
+      </section>
+
+      {/* PRIERE DU JOUR */}
+      <section className="max-w-6xl mx-auto px-4 py-14">
+        <div className="flex items-center justify-between mb-8">
+          <h2 className="text-2xl font-bold text-gray-900">Votre moment spirituel du jour</h2>
+          <a href="/priere-du-jour" className="text-amber-600 text-sm font-semibold hover:underline">Voir la page &rarr;</a>
+        </div>
+        <DailyContent />
       </section>
 
       {/* CATEGORIES */}
